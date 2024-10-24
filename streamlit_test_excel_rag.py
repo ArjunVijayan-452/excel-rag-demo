@@ -24,8 +24,8 @@ def load_excel_file(file_path):
 
    df = parser.parse_excel_sheet()
 
-   df.to_csv('/Users/arjunv/Desktop/RAG-EXCEL-ANTHROPIC/excel_rag_demo/data/single_sheet_single_table/merged_cells_1.csv', index=False)
-   excel_agent = ExcelAgent('/Users/arjunv/Desktop/RAG-EXCEL-ANTHROPIC/excel_rag_demo/data/single_sheet_single_table/merged_cells_1.csv')
+   df.to_csv('/home/ubuntu/arjun_repo/excel-rag-demo/data/merged_cells_1.csv', index=False)
+   excel_agent = ExcelAgent('/home/ubuntu/arjun_repo/excel-rag-demo/data/merged_cells_1.csv')
 
    return excel_agent, df
 
@@ -43,7 +43,7 @@ excel_agent = ''
 excel_sheets = ['None', 'Stock Item with BoM details.xlsx', 'Standard Table.xlsx'
                 ,'Ledgers in Default Template.xlsx', 'Bank Ledger with bank details.xlsx']
         
-file_path = f'/Users/arjunv/Desktop/RAG-EXCEL-ANTHROPIC/excel_rag_demo/data/single_sheet_single_table/{file_name}'
+file_path = f'/home/ubuntu/arjun_repo/excel-rag-demo/data/{file_name}'
 
 st.title("Excel-Rag : Slide Generator")
 
@@ -53,7 +53,7 @@ file_name = tile.selectbox('Choose a Supporting Document !', excel_sheets)
 st.session_state.file_name = file_name
 
 if file_name !=  'None':
-   file_path = f"/Users/arjunv/Desktop/RAG-EXCEL-ANTHROPIC/excel_rag_demo/data/single_sheet_single_table/{file_name}"
+   file_path = f"/home/ubuntu/arjun_repo/excel-rag-demo/data/{file_name}"
    parse_flag = tile.button('Parse Excel Sheet !')
 
    if parse_flag:
