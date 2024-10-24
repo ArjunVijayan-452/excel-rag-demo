@@ -9,7 +9,7 @@ from excel_agent import ExcelAgent
 from prompts import *
 
 # Load environment variables from the .env file
-dotenv.load_dotenv("magicfill.env")
+dotenv.load_dotenv()
 
 # Assign credentials with error handling for missing environment variables
 AWS_KEY = os.getenv('aws_access_key_id')

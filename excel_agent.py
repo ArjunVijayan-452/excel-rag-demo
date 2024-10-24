@@ -7,7 +7,7 @@ from langchain.agents.agent_types import AgentType
 from langchain_experimental.agents.agent_toolkits import create_csv_agent
 from langchain_community.chat_models import BedrockChat
 
-dotenv.load_dotenv("magicfill.env")
+dotenv.load_dotenv()
 
 # Assign credentials with error handling for missing environment variables
 AWS_KEY = os.getenv('aws_access_key_id')

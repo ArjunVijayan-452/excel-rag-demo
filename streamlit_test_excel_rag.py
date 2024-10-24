@@ -2,7 +2,7 @@ import dotenv
 import json
 import openpyxl
 
-dotenv.load_dotenv("magicfill.env")
+dotenv.load_dotenv()
 
 import pandas as pd
 import streamlit as st
